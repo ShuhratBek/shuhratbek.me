@@ -1,3 +1,40 @@
 body {
   background-color: lightgrey;
 }
+
+.layout, .layout-column, .layout-row {
+  box-sizing: border-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.layout-row {
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+.layout-wrap {
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+.layout-padding, .layout-padding-gt-sm, .layout-padding-gt-sm>*, .layout-padding-md, .layout-padding-md>*, .layout-padding>*, .layout-padding>.flex, .layout-padding>.flex-gt-sm, .layout-padding>.flex-md {
+  padding: 8px;
+}
+.layout-margin, .layout-margin-gt-sm, .layout-margin-gt-sm>*, .layout-margin-md, .layout-margin-md>*, .layout-margin>*, .layout-margin>.flex, .layout-margin>.flex-gt-sm, .layout-margin>.flex-md {
+   margin: 8px;
+}
+.layout-fill {
+  margin: 0;
+  width: 100%;
+  min-height: 100%;
+  height: 100%;
+}
+.flex-25 {
+  -webkit-flex: 1 1 25%;
+  -ms-flex: 1 1 25%;
+  flex: 1 1 25%;
+  max-width: 25%;
+  max-height: 100%;
+  box-sizing: border-box;
+}

@@ -1,11 +1,15 @@
-import {Component} from '@angular/core';
+import { Component } from '@angular/core';
+import { ToolbarComponent } from './toolbar';
+import { ROUTER_DIRECTIVES } from '@angular/router';
 
 @Component({
     selector: 'app',
-    template: 'app/app.component.html'
+    templateUrl: 'app/app.component.html',
+    directives: [
+        ToolbarComponent,
+        ROUTER_DIRECTIVES
+    ]
 })
 export class AppComponent {
-
-    constructor() {
-    }
+    constructor() {}
 }

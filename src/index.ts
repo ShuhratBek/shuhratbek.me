@@ -10,7 +10,10 @@ import { AppComponent } from './app';
 
 import { enableProdMode } from '@angular/core';
 import { HTTP_PROVIDERS } from '@angular/http';
+import { disableDeprecatedForms, provideForms } from '@angular/forms';
+import { APP_ROUTER_PROVIDERS } from './app/app.routes';
 import '@angular2-material/core';
+import { MdIconRegistry } from '@angular2-material/icon';
 
 declare var process: any;
 if (process.env.NODE_ENV === 'production') {
@@ -18,5 +21,9 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 bootstrap( AppComponent, [
-    HTTP_PROVIDERS
+    HTTP_PROVIDERS,
+    APP_ROUTER_PROVIDERS,
+    MdIconRegistry,
+    disableDeprecatedForms(),
+    provideForms()
 ]);
