@@ -3,30 +3,34 @@ import { ISkill } from './skill.model';
 export let SKILLS: ISkill[] = [
     {
         id: 1,
-        name: 'HTML'
+        title: 'HTML'
     },
     {
         id: 2,
-        name: 'CSS'
+        title: 'CSS'
     },
     {
         id: 3,
-        name: 'HTML5'
+        title: 'HTML5'
     },
     {
         id: 4,
-        name: 'Bootstrap'
+        title: 'Bootstrap'
     },
     {
         id: 5,
-        name: 'JavaScript'
+        title: 'JavaScript'
     },
     {
         id: 6,
-        name: 'AngularJS'
+        title: 'AngularJS'
     },
     {
         id: 7,
-        name: 'Angular 2'
+        title: 'Angular 2'
+    },
+    {
+        id: 8,
+        title: 'CSS3'
     }
 ];

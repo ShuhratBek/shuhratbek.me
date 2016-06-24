@@ -5,6 +5,7 @@ import { MD_CARD_DIRECTIVES } from '@angular2-material/card';
 import { MD_GRID_LIST_DIRECTIVES } from '@angular2-material/grid-list';
 import { SkillsService } from './skills.service';
 import { ISkill } from './skill.model';
+import * as _ from 'lodash/index';
 
 @Component({
     selector: 'skills',
@@ -13,7 +14,7 @@ import { ISkill } from './skill.model';
         MD_BUTTON_DIRECTIVES,
         MD_INPUT_DIRECTIVES,
         MD_CARD_DIRECTIVES,
-        MD_GRID_LIST_DIRECTIVES
+        MD_GRID_LIST_DIRECTIVES,
     ],
     providers: [
         SkillsService
@@ -21,10 +22,9 @@ import { ISkill } from './skill.model';
 })
 export class SkillsComponent implements OnInit{
     items: ISkill[];
-    newItem: ISkill;
+    model: ISkill;
 
     constructor(private skillsService: SkillsService) {
-        this.clearForm();
     }
 
     getItems() {
@@ -35,19 +35,11 @@ export class SkillsComponent implements OnInit{
         this.getItems();
     }
 
-    create() {
-        this.items.push(this.newItem);
-        this.clearForm();
-    }
 
-    clearForm() {
-        this.newItem = {
-            id: null,
-            name: ''
-        };
-    }
-
-    console() {
-        console.info(this.items);
+    maxValue() {
+        if(this.items) {
+            let res:ISkill = _.maxBy(this.items, x => x.id);
+            return res.id;
+        }
     }
 }

@@ -1,17 +1,11 @@
-<div>
-	<form (ngSubmit)="create()" #skillForm="ngForm">
-		<md-input placeholder="Name" [type]="text" [(ngModel)]="newItem.name" name="name" #name="ngModel"></md-input>
-		<md-input placeholder="Url" [type]="url" [(ngModel)]="newItem.url" name="url" #name="ngModel"></md-input>
-		<md-input placeholder="Logo" [type]="url" [(ngModel)]="newItem.logo" name="logo" #name="ngModel"></md-input>
-		<button type="submit" md-button>Save</button>
-		<button type="nutton" md-button (click)="console()">Console</button>
-	</form>
-</div>
+<form-skill [id]="maxValue()"></form-skill>
+<div>{{maxValue()}}</div>
 <section class="layout-row layout-wrap">
 	<div *ngFor="let item of items" class="flex-25 layout-padding">
 		<md-card>
 			<img *ngIf="item.logo" md-card-image [src]="item.logo">
-			<md-card-title>{{item.name}}</md-card-title>
+			<md-card-title>{{item.title}}</md-card-title>
 		</md-card>
 	</div>
 </section>
+<pre>{{items | json}}</pre>

@@ -1,4 +1,4 @@
-export class Work {
+export interface Work {
     name: string;
     type: number;
     description: string;
