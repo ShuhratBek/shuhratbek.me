@@ -21,9 +21,9 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 bootstrap( AppComponent, [
+    disableDeprecatedForms(),
+    provideForms(),
     HTTP_PROVIDERS,
     APP_ROUTER_PROVIDERS,
-    MdIconRegistry,
-    disableDeprecatedForms(),
-    provideForms()
+    MdIconRegistry
 ]);

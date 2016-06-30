@@ -1,6 +1,6 @@
-import { ISkill } from '../shared';
+import { ICompany } from '../shared';
 
-export let SKILLS: ISkill[] = [
+export let COMPANIES: ICompany[] = [
     {
         id: 1,
         title: 'HTML',

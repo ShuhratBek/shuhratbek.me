@@ -1,5 +1,5 @@
 export interface Work {
-    name: string;
+    title: string;
     type: number;
     description: string;
     image: string;

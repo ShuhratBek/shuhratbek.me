@@ -1,1 +1,6 @@
-<div *ngFor="let work of works">{{work.name}}</div>
+<button md-button (click)="addNew()">add</button>
+<section class="layout-row layout-wrap">
+	<div *ngFor="let item of items" class="flex-25 block">
+		<work [detail]="item"></work>
+	</div>
+</section>

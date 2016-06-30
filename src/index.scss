@@ -1,5 +1,6 @@
 body {
-  background-color: lightgrey;
+  background-color: #37474F;
+  margin: 0;
 }
 
 .layout, .layout-column, .layout-row {
@@ -37,4 +38,7 @@ body {
   max-width: 25%;
   max-height: 100%;
   box-sizing: border-box;
+}
+.block {
+  padding: 4px;
 }

@@ -3,9 +3,8 @@ import { MD_BUTTON_DIRECTIVES } from '@angular2-material/button';
 import { MD_TOOLBAR_DIRECTIVES } from '@angular2-material/toolbar';
 import { MD_INPUT_DIRECTIVES } from '@angular2-material/input';
 import { MD_CARD_DIRECTIVES } from '@angular2-material/card';
-import { SkillsService } from './skills.service';
-import { FormSkillComponent } from './form-skill';
-import { ISkill } from '../shared';
+import { CompaniesService } from './companies.service';
+import { ICompany } from '../shared';
 import * as _ from 'lodash/index';
 
 @Component({
@@ -15,22 +14,26 @@ import * as _ from 'lodash/index';
         MD_BUTTON_DIRECTIVES,
         MD_INPUT_DIRECTIVES,
         MD_CARD_DIRECTIVES,
-        MD_TOOLBAR_DIRECTIVES,
-        FormSkillComponent
+        MD_TOOLBAR_DIRECTIVES
     ],
+    styles: [`
+        .block {
+            padding: 4px;
+        }
+    `],
     providers: [
-        SkillsService
+        CompaniesService
     ]
 })
-export class SkillsComponent implements OnInit {
-    items: ISkill[];
-    model: ISkill;
+export class CompaniesComponent implements OnInit {
+    items: ICompany[];
+    model: ICompany;
 
-    constructor(private skillsService: SkillsService) {
+    constructor(private companiesService: CompaniesService) {
     }
 
     getItems() {
-        this.skillsService.getItems().then(items => this.items = items);
+        this.companiesService.getItems().then(items => this.items = items);
     }
 
     ngOnInit() {
@@ -40,7 +43,7 @@ export class SkillsComponent implements OnInit {
 
     maxValue() {
         if (this.items) {
-            let res: ISkill = _.maxBy(this.items, x => x.id);
+            let res: ICompany = _.maxBy(this.items, x => x.id);
             return res.id + 1;
         }
     }

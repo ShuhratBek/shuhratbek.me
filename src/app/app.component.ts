@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { ToolbarComponent } from './toolbar';
 import { ROUTER_DIRECTIVES } from '@angular/router';
+import { MdIconRegistry } from '@angular2-material/icon';
 
 @Component({
     selector: 'app',
@@ -11,5 +12,7 @@ import { ROUTER_DIRECTIVES } from '@angular/router';
     ]
 })
 export class AppComponent {
-    constructor() {}
+    constructor(private mdIconRegistry: MdIconRegistry) {
+        mdIconRegistry.addSvgIcon('search', '../src/images/icons/search.svg');
+    }
 }

@@ -20,5 +20,9 @@ export const MENUS: Menu[] = [
     {
         path: 'skills',
         title: 'Skills'
+    },
+    {
+        path: 'companies',
+        title: 'Companies'
     }
 ];

@@ -15,7 +15,7 @@ import { MD_BUTTON_DIRECTIVES } from '@angular2-material/button';
         ToolbarService
     ]
 })
-export class ToolbarComponent implements OnInit{
+export class ToolbarComponent implements OnInit {
     menus: Menu[];
 
     constructor(private toolbarService: ToolbarService) {

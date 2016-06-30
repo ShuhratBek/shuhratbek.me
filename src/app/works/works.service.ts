@@ -3,7 +3,19 @@ import { WORKS } from './mock-works';
 
 @Injectable()
 export class WorksService {
-    getWorks() {
+    getItems() {
         return Promise.resolve(WORKS);
+    }
+    addNew() {
+        WORKS.push({
+            title: '15',
+                type: 1,
+            description: '5456',
+            image: '521635',
+            images: [
+                '3515'
+            ],
+            created: 11
+        });
     }
 }

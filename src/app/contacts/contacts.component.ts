@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { MD_BUTTON_DIRECTIVES } from '@angular2-material/button';
 
 @Component({
@@ -8,9 +8,5 @@ import { MD_BUTTON_DIRECTIVES } from '@angular2-material/button';
         MD_BUTTON_DIRECTIVES
     ]
 })
-export class ContactsComponent implements OnInit{
-
-    constructor() {}
-
-    ngOnInit() {}
+export class ContactsComponent {
 }
