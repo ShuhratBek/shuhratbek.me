@@ -1,6 +1,3 @@
-<button md-button (click)="addNew()">add</button>
-<section class="layout-row layout-wrap">
-	<div *ngFor="let item of items" class="flex-25 block">
-		<work [detail]="item"></work>
-	</div>
+<section class="masonry">
+	<work *ngFor="let item of items" [detail]="item" class="item"></work>
 </section>

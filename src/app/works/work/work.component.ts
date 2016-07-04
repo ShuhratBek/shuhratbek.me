@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { MD_BUTTON_DIRECTIVES } from '@angular2-material/button';
 import { MD_CARD_DIRECTIVES } from '@angular2-material/card';
-import { Work } from '../work.model';
+import { IWork } from '../work.model';
 
 @Component({
     selector: 'work',
@@ -9,8 +9,13 @@ import { Work } from '../work.model';
     directives: [
         MD_BUTTON_DIRECTIVES,
         MD_CARD_DIRECTIVES
-    ]
+    ],
+    styles: [`
+        .cover {
+            width: 100%;
+        }
+    `]
 })
 export class WorkComponent {
-    @Input() detail: Work;
+    @Input() detail: IWork;
 }

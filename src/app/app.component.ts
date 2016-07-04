@@ -13,6 +13,8 @@ import { MdIconRegistry } from '@angular2-material/icon';
 })
 export class AppComponent {
     constructor(private mdIconRegistry: MdIconRegistry) {
-        mdIconRegistry.addSvgIcon('search', '../src/images/icons/search.svg');
+        mdIconRegistry
+            .addSvgIcon('search', '../src/images/icons/search.svg')
+            .addSvgIcon('menu', '../src/images/icons/menu.svg');
     }
 }

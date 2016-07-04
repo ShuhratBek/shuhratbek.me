@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MD_BUTTON_DIRECTIVES } from '@angular2-material/button';
 import { WorksService } from './works.service';
-import { Work } from './work.model';
+import { IWork } from './work.model';
 import { WorkComponent } from './work';
 
 @Component({
@@ -16,7 +16,7 @@ import { WorkComponent } from './work';
     ]
 })
 export class WorksComponent implements OnInit {
-    items: Work[];
+    items: IWork[];
 
     constructor(private worksService: WorksService) {
     }
@@ -27,9 +27,5 @@ export class WorksComponent implements OnInit {
 
     ngOnInit() {
         this.getItems();
-    }
-
-    addNew() {
-        this.worksService.addNew();
     }
 }
