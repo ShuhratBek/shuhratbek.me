@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
-import { MENUS } from './mock-toolbar';
+import { MENUS } from './mock-sidenav';
 
 @Injectable()
-export class ToolbarService {
+export class SidenavService {
     getMenus() {
         return Promise.resolve(MENUS);
     }
