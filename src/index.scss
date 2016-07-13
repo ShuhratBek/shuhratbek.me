@@ -1,5 +1,5 @@
 body {
-  background-color: #37474F;
+  background-color: #fefefe;
   margin: 0;
 }
 
@@ -42,46 +42,6 @@ body {
 .block {
   padding: 4px;
 }
-//.masonry {
-//  display: -ms-flexbox;
-//  -ms-flex-direction: column;
-//  -ms-flex-wrap: wrap;
-//  display: flex;
-//  flex-direction: column;
-//  flex-wrap: wrap;
-//  height: 100vw;
-//  font-size: 0;
-//  width: 90%;
-//  margin: 0 auto;
-//
-//  .item {
-//    width: 33.3%;
-//    transition: .8s opacity;
-//  }
-//  &:hover .item {
-//    opacity: 0.3;
-//    &:hover {
-//      opacity: 1;
-//    }
-//  }
-//}
-//@supports not (flex-wrap: wrap) {
-//  .masonry {
-//    display: block;
-//    .item {
-//      display: inline-block;
-//      vertical-align: top;
-//    }
-//  }
-//}
-//@media screen and (max-width: 500px) {
-//  .masonry {
-//    height: 200vw;
-//    .item {
-//      width: 50%;
-//    }
-//  }
-//}
 .masonry {
   display: flex;
   flex-flow: column nowrap; /* shorthand for flex-direction and flex-wrap */

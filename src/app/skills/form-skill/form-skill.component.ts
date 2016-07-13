@@ -1,12 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { NgForm }    from '@angular/common';
 import { MD_BUTTON_DIRECTIVES } from '@angular2-material/button';
 import { MD_INPUT_DIRECTIVES } from '@angular2-material/input';
 import { MD_CARD_DIRECTIVES } from '@angular2-material/card';
 import { SkillsService } from '../skills.service';
-import { ISkill } from '../../shared';
 import { Skill } from './skill.model';
-import * as _ from 'lodash/index';
 
 @Component({
     selector: 'form-skill',
@@ -18,7 +15,7 @@ import * as _ from 'lodash/index';
     ]
 })
 export class FormSkillComponent implements OnInit {
-    model = new Skill(0, '');
+    model = new Skill(0, 'ghg');
 
     constructor(private skillsService: SkillsService) {
     }
