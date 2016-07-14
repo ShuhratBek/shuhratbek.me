@@ -1,7 +1,8 @@
 export class Skill {
+
     constructor(
         public id: number,
-        public title: string,
+        public name: string,
         public logo?: string
     ) {  }
 }

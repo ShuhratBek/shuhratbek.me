@@ -4,6 +4,7 @@ import { ROUTER_DIRECTIVES } from '@angular/router';
 import { MD_ICON_DIRECTIVES, MdIconRegistry } from '@angular2-material/icon';
 import { MD_SIDENAV_DIRECTIVES } from '@angular2-material/sidenav';
 import { MD_BUTTON_DIRECTIVES } from '@angular2-material/button';
+import { MD_TOOLBAR_DIRECTIVES } from '@angular2-material/toolbar';
 
 @Component({
     selector: 'app',
@@ -13,7 +14,8 @@ import { MD_BUTTON_DIRECTIVES } from '@angular2-material/button';
         ROUTER_DIRECTIVES,
         MD_SIDENAV_DIRECTIVES,
         MD_ICON_DIRECTIVES,
-        MD_BUTTON_DIRECTIVES
+        MD_BUTTON_DIRECTIVES,
+        MD_TOOLBAR_DIRECTIVES
     ],
     styles: [`
         * {
@@ -28,7 +30,10 @@ import { MD_BUTTON_DIRECTIVES } from '@angular2-material/button';
             background: rgba(0,0,0,0.7);
             color: #fff;
         }
-    `]
+    `],
+    providers: [
+        MdIconRegistry
+    ]
 })
 export class AppComponent {
     constructor(private mdIconRegistry: MdIconRegistry) {

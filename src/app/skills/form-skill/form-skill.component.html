@@ -1,6 +1,6 @@
 <md-card>
-	<form (ngSubmit)="save()" #skillForm="ngForm">
-		<md-input type="text" [(ngModel)]="model.title" name="title" #name="ngModel" placeholder="Title"></md-input>
+	<form *ngIf="active" (ngSubmit)="onSubmit()" #f="ngForm">
+		<md-input [(ngModel)]="model.name" name="name" placeholder="Title" required></md-input>
 		<button type="submit" md-button>Save</button>
 	</form>
 </md-card>

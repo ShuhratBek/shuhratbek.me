@@ -1,11 +1,22 @@
-<section class="layout-row layout-wrap">
-	<div *ngFor="let item of items" class="flex-25 block">
-		<md-card>
-			<md-card-title-group>
-				<img *ngIf="item.logo" md-card-sm-image [src]="item.logo">
-				<md-card-title>{{item.title}}</md-card-title>
-				<md-card-subtitle>3 projects</md-card-subtitle>
-			</md-card-title-group>
-		</md-card>
-	</div>
+<h1>Skills</h1>
+<form-skill></form-skill>
+<section>
+	<!--<div *ngFor="let item of items" class="flex-25 block">-->
+		<!--<md-card>-->
+			<!--<md-card-title-group>-->
+				<!--<img *ngIf="item.logo" md-card-sm-image [src]="item.logo">-->
+				<!--<md-card-title>{{item.title}}</md-card-title>-->
+				<!--<md-card-subtitle>3 projects</md-card-subtitle>-->
+			<!--</md-card-title-group>-->
+		<!--</md-card>-->
+	<!--</div>-->
+	<md-grid-list cols="5" rowHeight="4:4">
+		<md-grid-tile *ngFor="let item of items">
+			<img class="img" [alt]="item.title" [src]="item.logo">
+			<md-grid-tile-footer>
+				<h3 md-line>{{item.title}}</h3>
+				<span md-line>3 projects</span>
+			</md-grid-tile-footer>
+		</md-grid-tile>
+	</md-grid-list>
 </section>

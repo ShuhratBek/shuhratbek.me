@@ -1,9 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 import { SidenavService } from './sidenav.service';
 import { Menu } from './menu.model';
-import { ROUTER_DIRECTIVES }  from '@angular/router';
+import { ROUTER_DIRECTIVES, Router }  from '@angular/router';
 import { MD_BUTTON_DIRECTIVES } from '@angular2-material/button';
 import { MD_LIST_DIRECTIVES } from '@angular2-material/list';
+import { MD_ICON_DIRECTIVES } from '@angular2-material/icon';
 
 @Component({
     selector: 'sidenav',
@@ -11,7 +12,8 @@ import { MD_LIST_DIRECTIVES } from '@angular2-material/list';
     directives: [
         MD_BUTTON_DIRECTIVES,
         ROUTER_DIRECTIVES,
-        MD_LIST_DIRECTIVES
+        MD_LIST_DIRECTIVES,
+        MD_ICON_DIRECTIVES
     ],
     styles: [`
         .md-list-item {
@@ -23,9 +25,11 @@ import { MD_LIST_DIRECTIVES } from '@angular2-material/list';
     ]
 })
 export class SidenavComponent implements OnInit {
+    @Output() onClose = new EventEmitter();
     menus: Menu[];
 
-    constructor(private sidenavService: SidenavService) {
+    constructor(private sidenavService: SidenavService,
+        private router: Router) {
     }
 
     getMenus() {
@@ -34,5 +38,10 @@ export class SidenavComponent implements OnInit {
 
     ngOnInit() {
         this.getMenus();
+    }
+
+    navigate(link: string) {
+        this.router.navigate([link]);
+        this.onClose.emit(null);
     }
 }

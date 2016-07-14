@@ -9,7 +9,7 @@ import * as _ from 'lodash/index';
 
 @Component({
     selector: 'skills',
-    templateUrl: 'app/skills/skills.component.html',
+    templateUrl: 'app/companies/companies.component.html',
     directives: [
         MD_BUTTON_DIRECTIVES,
         MD_INPUT_DIRECTIVES,
